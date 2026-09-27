@@ -1,0 +1,9 @@
+step,rows_removed,rows_remaining,reason
+Raw data,0,541909,Starting point
+Remove exact duplicates,5268,536641,Identical rows are repeated records
+Parse InvoiceDate,0,536641,Rows with invalid dates cannot be placed in time
+Remove missing CustomerID,135037,401604,Transactions without a customer cannot be used for customer-level analysis
+Handle cancellations,11923,389681,"8,872 cancellation rows removed; 3,051 original purchase rows they fully cancelled were also removed"
+Remove non-positive Quantity,0,389681,Zero/negative quantities outside cancellations are stock adjustments
+Remove non-positive UnitPrice,40,389641,Zero or negative prices are not genuine sales
+Remove non-product codes,1476,388165,"Postage, fees, discounts and manual entries do not describe product purchases"

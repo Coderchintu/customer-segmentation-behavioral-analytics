@@ -1,0 +1,114 @@
+{
+  "data_source": "UCI Online Retail (full)",
+  "snapshot_date": "2011-12-10",
+  "selected_k": 3,
+  "elbow_k": 5,
+  "silhouette": 0.3381,
+  "davies_bouldin": 1.0401,
+  "stability_ari": 0.9775,
+  "pca_explained_variance": [
+    0.7532,
+    0.1864
+  ],
+  "currency": "\u00a3",
+  "raw_rows": 541909,
+  "clean_rows": 388165,
+  "date_range": [
+    "2010-12-01",
+    "2011-12-09"
+  ],
+  "customers": 4322,
+  "orders": 18265,
+  "countries": 37,
+  "total_revenue": 8345010.36,
+  "average_order_value": 456.89,
+  "validation_checks": {
+    "no_missing_key_values": true,
+    "quantity_positive": true,
+    "unit_price_positive": true,
+    "total_amount_positive": true,
+    "no_cancellation_invoices": true,
+    "invoice_date_is_datetime": true,
+    "no_duplicate_rows": true
+  },
+  "skewness": {
+    "raw_skewness": {
+      "Recency": 1.24,
+      "Frequency": 11.86,
+      "Monetary": 21.38
+    },
+    "log_skewness": {
+      "Recency": -0.32,
+      "Frequency": 1.22,
+      "Monetary": 0.37
+    }
+  },
+  "iqr_outliers": {
+    "Recency": 140,
+    "Frequency": 273,
+    "Monetary": 417
+  },
+  "spearman_correlation": {
+    "Recency": {
+      "Recency": 1.0,
+      "Frequency": -0.566,
+      "Monetary": -0.483
+    },
+    "Frequency": {
+      "Recency": -0.566,
+      "Frequency": 1.0,
+      "Monetary": 0.807
+    },
+    "Monetary": {
+      "Recency": -0.483,
+      "Frequency": 0.807,
+      "Monetary": 1.0
+    }
+  },
+  "hypothesis_test": {
+    "test": "Mann-Whitney U (two-sided)",
+    "variable": "AvgOrderValue",
+    "group_a": "United Kingdom",
+    "group_b": "International",
+    "n_group_a": 3907,
+    "n_group_b": 415,
+    "median_group_a": 276.7,
+    "median_group_b": 387.31,
+    "u_statistic": 576353.0,
+    "p_value": 3.119942478049773e-22,
+    "rank_biserial_effect_size": -0.289,
+    "significant_at_0.05": true
+  },
+  "segments": [
+    {
+      "Cluster": 0,
+      "Segment": "Potential Customers",
+      "Customers": 1705,
+      "CustomerSharePct": 39.4,
+      "RevenueSharePct": 24.8,
+      "Recency_median": 30.0,
+      "Frequency_median": 3.0,
+      "Monetary_median": 939.32
+    },
+    {
+      "Cluster": 1,
+      "Segment": "Low-Engagement Customers",
+      "Customers": 1860,
+      "CustomerSharePct": 43.0,
+      "RevenueSharePct": 7.9,
+      "Recency_median": 162.0,
+      "Frequency_median": 1.0,
+      "Monetary_median": 289.87
+    },
+    {
+      "Cluster": 2,
+      "Segment": "High-Value Customers",
+      "Customers": 757,
+      "CustomerSharePct": 17.5,
+      "RevenueSharePct": 67.3,
+      "Recency_median": 10.0,
+      "Frequency_median": 10.0,
+      "Monetary_median": 3560.32
+    }
+  ]
+}
