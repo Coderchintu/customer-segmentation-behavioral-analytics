@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+*.pem
+*.key
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Data: the raw dataset is downloaded, never committed
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Generated models (recreated by run_pipeline.py)
+models/*
+!models/.gitkeep
+
+# Large or temporary generated reports
+reports/sample_run/
+reports/customer_segments.csv
